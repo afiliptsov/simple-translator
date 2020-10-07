@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+const [language, setLanguage] = useState('ru');
+const [text, setText] = useState('');
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Simple Translator</h1>
+      <input placeholder="Enter English" onChange={setText}/>
+      <h2>Select Language</h2>
+      <div>
+      <select>
+        <option>Russian</option>
+        <option>English</option>
+        <option>Spanish</option>
+      </select>
+      </div>
+      <button>Transle</button>
+
     </div>
   );
 }
