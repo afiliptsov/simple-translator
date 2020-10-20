@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 
 function App() {
 const [language, setLanguage] = useState('ru');
@@ -18,8 +20,7 @@ const [text, setText] = useState('');
         <option>Spanish</option>
       </select>
       </div>
-      <button>Transle</button>
-
+      <Button type="primary">Translate</Button>
     </div>
   );
 }
