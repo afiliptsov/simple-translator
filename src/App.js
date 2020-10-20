@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Button, Steps } from 'antd';
+import { Button, Steps, Modal } from 'antd';
 import 'antd/dist/antd.css';
 const {Step} = Steps;
  
@@ -24,6 +24,14 @@ const [text, setText] = useState('');
     <Step title="Finished" description="First step test." />
     <Step title="In Progress" subTitle="Left 00:00:08" description="Second step test." />
     <Step title="Waiting" description="This step." />
+      <Modal
+          title="Basic Modal"
+          visible={true}
+        >
+          <p>1...</p>
+          <p>2...</p>
+          <p>3...</p>
+        </Modal>
   </Steps>,
       </div>
       <Button type="primary">Translate</Button>
